@@ -1,9 +1,9 @@
-package com.cucumber.dao;
-
+package com.restassured.dao;
 
 import java.util.List;
 
-import com.cucumber.model.Employee;
+import com.restassured.model.Employee;
+
 
 public interface EmployeeDao {
 

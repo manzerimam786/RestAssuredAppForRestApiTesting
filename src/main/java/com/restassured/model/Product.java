@@ -1,4 +1,4 @@
-package com.cucumber.model;
+package com.restassured.model;
 
 import java.util.Date;
 

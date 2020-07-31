@@ -1,10 +1,7 @@
-package com.cucumber.service;
-
+package com.restassured.service;
 
 import java.util.List;
-
-import com.cucumber.model.Employee;
-
+import com.restassured.model.Employee;
 
 public interface EmployeeService {
     public abstract List<Employee> getAllEmployees();

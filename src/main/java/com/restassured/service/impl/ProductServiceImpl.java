@@ -1,4 +1,4 @@
-package com.cucumber.service.impl;
+package com.restassured.service.impl;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -7,9 +7,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.cucumber.dao.ProductRepository;
-import com.cucumber.model.Product;
-import com.cucumber.model.Student;
+import com.restassured.repository.ProductRepository;
+import com.restassured.model.Product;
 
 @Service
 public class ProductServiceImpl {

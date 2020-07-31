@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.cucumber</groupId>
-	<artifactId>CucumberRestApp</artifactId>
+	<artifactId>RestAssuredApp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>CucumberRestApp</name>
+	<name>RestAssuredAppForRestApiTesting</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

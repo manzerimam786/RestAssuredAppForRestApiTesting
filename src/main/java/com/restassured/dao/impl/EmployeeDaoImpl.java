@@ -1,4 +1,4 @@
-package com.cucumber.dao.impl;
+package com.restassured.dao.impl;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -8,8 +8,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import org.springframework.stereotype.Repository;
 
-import com.cucumber.dao.EmployeeDao;
-import com.cucumber.model.Employee;
+import com.restassured.dao.EmployeeDao;
+import com.restassured.model.Employee;
+
 @Repository
 public class EmployeeDaoImpl implements EmployeeDao {
 

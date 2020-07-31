@@ -1,4 +1,5 @@
-package com.cucumber.controller;
+package com.restassured.controller;
+
 
 import java.util.List;
 
@@ -11,21 +12,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cucumber.model.Student;
-import com.cucumber.service.impl.StudentServiceImpl;
+import com.restassured.model.Product;
+import com.restassured.service.impl.ProductServiceImpl;
+
 
 @RestController
 @CrossOrigin(origins="http://localhost:4200")
-@RequestMapping("/students")
-public class StudentController {
+@RequestMapping("/products")
+public class ProductController {
 
 
 	@Autowired
-	StudentServiceImpl studentService;
-	@RequestMapping(value="/students", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<List<Student>> getAllStudents()
+	ProductServiceImpl productServiceImpl;
+	@RequestMapping(value="/products", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<List<Product>> getAllProducts()
 	{
-		List<Student> list = studentService.getAllStudents();
-		return new ResponseEntity<List<Student>>(list,HttpStatus.OK);
+		List<Product> list = productServiceImpl.getAllProducts();
+		return new ResponseEntity<List<Product>>(list,HttpStatus.OK);
 	}
 }
