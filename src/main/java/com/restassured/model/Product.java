@@ -3,6 +3,8 @@ package com.restassured.model;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -11,6 +13,7 @@ import javax.persistence.Table;
 public class Product {
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer productid;
 	private String productname;
 	private int price;
@@ -33,10 +36,10 @@ public class Product {
 		this.cod = cod;
 		this.insertiondate = insertiondate;
 	}
-	public int getProductid() {
+	public Integer getProductid() {
 		return productid;
 	}
-	public void setProductid(int productid) {
+	public void setProductid(Integer productid) {
 		this.productid = productid;
 	}
 	public String getProductname() {

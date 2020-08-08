@@ -4,15 +4,18 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.restassured.repository.ProductRepository;
 import com.restassured.model.Product;
+import com.restassured.repository.ProductRepository;
 
 @Service
 public class ProductServiceImpl {
 
+	//Logger logger = LoggerFactory.getLogger(ProductServiceImpl.class);
 	@Autowired
 	ProductRepository productRepository;
 	
@@ -32,5 +35,23 @@ public class ProductServiceImpl {
 			list.add(product);
 		}
 		return list;
+	}
+	
+	public Product getProduct(String name) {
+		Product product = productRepository.findByproductname(name);
+		return product;
+	}
+	
+	public void createProduct(Product product) {
+		productRepository.save(product);
+	}
+	
+	public Product updateProduct(int productid) {
+		return null;
+		//productRepository.sve(product);
+	}
+	
+	public void deleteProduct(int id) {
+	    productRepository.delete(id);	
 	}
 }
